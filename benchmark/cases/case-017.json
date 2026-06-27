@@ -1,0 +1,1 @@
+{"id":"case-017","description":"pd.Panel long removed — AI creates 3D panel from dict of DataFrames","code":"import pandas as pd\nimport numpy as np\ndata = {'Item1': pd.DataFrame(np.random.randn(4, 3)), 'Item2': pd.DataFrame(np.random.randn(4, 2))}\npanel = pd.Panel(data)\n","expected":{"verdict":"contradicted","claim_contains":"Panel"},"category":"removed-api"}

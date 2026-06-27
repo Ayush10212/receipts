@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "run": {
+    "id": "run-001",
+    "timestamp": "2026-06-26T00:00:00Z",
+    "tool_version": "0.1.0",
+    "inputs_hash": "abc123",
+    "target_env": {
+      "language": "python",
+      "version": "3.11.4",
+      "prefix": "/usr/local"
+    }
+  },
+  "claims": [
+    {
+      "id": "c-001",
+      "type": "symbol",
+      "subtype": "attribute",
+      "text": "pandas.DataFrame.merge",
+      "locus": { "file": "main.py", "line": 5, "col": 4, "end_line": 5, "end_col": 24 },
+      "verdict": "grounded",
+      "confidence": 1.0,
+      "evidence": [
+        { "kind": "introspection", "detail": "pandas 2.1.0: DataFrame.merge exists", "determinism": "deterministic" }
+      ],
+      "verifier": { "name": "python-symbols", "version": "0.1.0", "determinism": "deterministic" }
+    }
+  ],
+  "policy": {
+    "backend": "local",
+    "decision": "pass",
+    "rules_applied": ["fail-on-contradicted"]
+  },
+  "summary": { "grounded": 1, "contradicted": 0, "unverifiable": 0 }
+}

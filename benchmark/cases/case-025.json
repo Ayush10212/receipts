@@ -1,0 +1,1 @@
+{"id":"case-025","description":"pd.DataFrame.set_index (grounded) — AI sets DataFrame index","code":"import pandas as pd\ndf = pd.DataFrame({'id': [1, 2, 3], 'value': [10, 20, 30]})\nresult = pd.DataFrame.set_index(df, 'id')\n","expected":{"verdict":"grounded","claim_contains":"set_index"},"category":"valid-api"}

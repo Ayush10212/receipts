@@ -1,0 +1,1 @@
+{"id":"case-005","description":"np.object removed in numpy 1.24 — AI generated object array","code":"import numpy as np\nstrs = np.array(['a', 'b'], dtype=np.object)\n","expected":{"verdict":"contradicted","claim_contains":"object"},"category":"removed-api"}

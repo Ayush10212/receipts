@@ -1,0 +1,1 @@
+{"id":"case-001","description":"np.bool removed in numpy 1.24 — AI generated dtype cast","code":"import numpy as np\narr = np.array([1, 0, 1])\ndtype = np.bool\nresult = arr.astype(dtype)\n","expected":{"verdict":"contradicted","claim_contains":"bool"},"category":"removed-api"}

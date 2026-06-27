@@ -1,0 +1,1 @@
+{"id":"case-019","description":"pd.DataFrame.merge (grounded) — AI joins two DataFrames","code":"import pandas as pd\nleft = pd.DataFrame({'key': ['a', 'b'], 'val': [1, 2]})\nright = pd.DataFrame({'key': ['a', 'b'], 'info': ['x', 'y']})\nresult = pd.DataFrame.merge(left, right, on='key')\n","expected":{"verdict":"grounded","claim_contains":"merge"},"category":"valid-api"}

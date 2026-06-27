@@ -1,0 +1,1 @@
+{"id":"case-045","description":"np.frompyfunc creates a ufunc (unverifiable) — C-extension trap","code":"import numpy as np\nadd_one = np.frompyfunc(lambda x: x + 1, 1, 1)\n","expected":{"verdict":"unverifiable","claim_contains":"frompyfunc"},"category":"c-extension-trap"}

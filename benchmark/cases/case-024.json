@@ -1,0 +1,1 @@
+{"id":"case-024","description":"pd.DataFrame.rename (grounded) — AI renames columns","code":"import pandas as pd\ndf = pd.DataFrame({'old_name': [1, 2, 3]})\nresult = pd.DataFrame.rename(df, columns={'old_name': 'new_name'})\n","expected":{"verdict":"grounded","claim_contains":"rename"},"category":"valid-api"}

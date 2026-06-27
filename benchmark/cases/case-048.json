@@ -1,0 +1,1 @@
+{"id":"case-048","description":"import jax (unverifiable) — not installed, ImportError trap","code":"import jax\nimport jax.numpy as jnp\narr = jnp.array([1.0, 2.0, 3.0])\nresult = jax.grad(lambda x: jnp.sum(x ** 2))(arr)\n","expected":{"verdict":"unverifiable","claim_contains":"jax"},"category":"import-error-trap"}

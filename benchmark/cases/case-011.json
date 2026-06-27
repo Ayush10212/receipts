@@ -1,0 +1,1 @@
+{"id":"case-011","description":"pd.DataFrame.append removed in pandas 2.0 — AI merges rows","code":"import pandas as pd\ndf1 = pd.DataFrame({'a': [1, 2]})\ndf2 = pd.DataFrame({'a': [3, 4]})\nresult = pd.DataFrame.append(df1, df2, ignore_index=True)\n","expected":{"verdict":"contradicted","claim_contains":"append"},"category":"removed-api"}

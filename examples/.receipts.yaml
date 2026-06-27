@@ -1,0 +1,7 @@
+llm:
+  enabled: false          # we'll turn it on per-run with --llm
+  primary: mistral        # mistral | grok
+  fallback: grok
+  mistral_model: mistral-large-latest
+  grok_model: grok-2-latest
+  timeout_ms: 8000

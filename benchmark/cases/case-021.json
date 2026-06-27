@@ -1,0 +1,1 @@
+{"id":"case-021","description":"pd.DataFrame.sort_values (grounded) — AI sorts by column","code":"import pandas as pd\ndf = pd.DataFrame({'name': ['c', 'a', 'b'], 'score': [3, 1, 2]})\nresult = pd.DataFrame.sort_values(df, 'score')\n","expected":{"verdict":"grounded","claim_contains":"sort_values"},"category":"valid-api"}

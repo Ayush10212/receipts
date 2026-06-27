@@ -1,0 +1,1 @@
+{"id":"case-028","description":"pd.DataFrame.pivot_table (grounded) — AI creates pivot table","code":"import pandas as pd\ndf = pd.DataFrame({'A': ['foo', 'foo', 'bar'], 'B': ['one', 'two', 'one'], 'C': [1, 2, 3]})\nresult = pd.DataFrame.pivot_table(df, values='C', index='A', columns='B')\n","expected":{"verdict":"grounded","claim_contains":"pivot_table"},"category":"valid-api"}

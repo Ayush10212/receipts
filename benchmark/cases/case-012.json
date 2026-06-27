@@ -1,0 +1,1 @@
+{"id":"case-012","description":"pd.DataFrame.iteritems removed in pandas 2.0 — AI iterates columns","code":"import pandas as pd\ndf = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})\nfor col, series in pd.DataFrame.iteritems(df):\n    print(col)\n","expected":{"verdict":"contradicted","claim_contains":"iteritems"},"category":"removed-api"}

@@ -1,0 +1,1 @@
+{"id":"case-031","description":"np.ones (grounded) — AI creates ones array","code":"import numpy as np\nidentity_like = np.ones((5, 5))\n","expected":{"verdict":"grounded","claim_contains":"ones"},"category":"valid-api"}

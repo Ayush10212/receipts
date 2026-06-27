@@ -1,0 +1,10 @@
+- id: receipts-check
+  name: Receipts — verify AI-generated Python symbols
+  description: |
+    Statically verifies that every symbol referenced in staged Python files
+    exists in the installed environment. Catches hallucinated or removed APIs
+    before they reach code review.
+  language: golang
+  entry: receipts check --staged --fail-on contradicted
+  types: [python]
+  pass_filenames: false

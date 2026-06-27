@@ -1,0 +1,1 @@
+{"id":"case-050","description":"np.linspace (grounded) — AI creates evenly spaced values","code":"import numpy as np\nx = np.linspace(0, 2 * np.pi, 100)\ny = np.sin(x)\n","expected":{"verdict":"grounded","claim_contains":"linspace"},"category":"valid-api"}

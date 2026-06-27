@@ -1,0 +1,1 @@
+{"id":"case-043","description":"import xgboost (unverifiable) — not installed, ImportError trap","code":"import xgboost as xgb\nmodel = xgb.XGBClassifier(n_estimators=100, learning_rate=0.1)\nmodel.fit(X_train, y_train)\n","expected":{"verdict":"unverifiable","claim_contains":"xgboost"},"category":"import-error-trap"}

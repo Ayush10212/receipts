@@ -1,0 +1,1 @@
+{"id":"case-006","description":"np.str removed in numpy 1.24 — AI generated string dtype","code":"import numpy as np\nwords = np.array(['hello', 'world'], dtype=np.str)\n","expected":{"verdict":"contradicted","claim_contains":"str"},"category":"removed-api"}

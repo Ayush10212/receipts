@@ -1,0 +1,1 @@
+{"id":"case-030","description":"np.zeros (grounded) — AI creates zero-filled array","code":"import numpy as np\nmatrix = np.zeros((3, 4))\n","expected":{"verdict":"grounded","claim_contains":"zeros"},"category":"valid-api"}

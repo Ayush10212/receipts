@@ -1,0 +1,1 @@
+{"id":"case-038","description":"pd.concat (grounded) — AI concatenates DataFrames","code":"import pandas as pd\ndf1 = pd.DataFrame({'a': [1, 2]})\ndf2 = pd.DataFrame({'a': [3, 4]})\nresult = pd.concat([df1, df2], ignore_index=True)\n","expected":{"verdict":"grounded","claim_contains":"concat"},"category":"valid-api"}

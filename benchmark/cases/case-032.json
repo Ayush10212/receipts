@@ -1,0 +1,1 @@
+{"id":"case-032","description":"np.mean (grounded) — AI computes mean","code":"import numpy as np\ndata = np.array([10.0, 20.0, 30.0, 40.0])\navg = np.mean(data)\n","expected":{"verdict":"grounded","claim_contains":"mean"},"category":"valid-api"}

@@ -1,0 +1,1 @@
+{"id":"case-041","description":"import tensorflow (unverifiable) — not installed, ImportError trap","code":"import tensorflow as tf\nmodel = tf.keras.Sequential([\n    tf.keras.layers.Dense(64, activation='relu'),\n    tf.keras.layers.Dense(1)\n])\n","expected":{"verdict":"unverifiable","claim_contains":"tensorflow"},"category":"import-error-trap"}

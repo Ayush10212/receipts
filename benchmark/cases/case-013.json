@@ -1,0 +1,1 @@
+{"id":"case-013","description":"pd.Series.iteritems removed in pandas 2.0 — AI iterates series","code":"import pandas as pd\ns = pd.Series([10, 20, 30])\nfor idx, val in pd.Series.iteritems(s):\n    print(idx, val)\n","expected":{"verdict":"contradicted","claim_contains":"iteritems"},"category":"removed-api"}

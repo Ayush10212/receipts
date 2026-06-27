@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "code", "expected", "category"],
+  "additionalProperties": false,
+  "properties": {
+    "id":          { "type": "string", "pattern": "^case-[0-9]{3}$" },
+    "description": { "type": "string" },
+    "code":        { "type": "string", "minLength": 1 },
+    "expected": {
+      "type": "object",
+      "required": ["verdict"],
+      "additionalProperties": false,
+      "properties": {
+        "verdict":        { "enum": ["contradicted", "grounded", "unverifiable"] },
+        "claim_contains": { "type": "string" }
+      }
+    },
+    "category": {
+      "enum": ["removed-api", "valid-api", "c-extension-trap", "kwargs-trap", "import-error-trap", "wrong-kwarg"]
+    }
+  }
+}

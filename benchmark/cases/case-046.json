@@ -1,0 +1,1 @@
+{"id":"case-046","description":"np.vectorize (unverifiable) — opaque wrapper, C-extension signature","code":"import numpy as np\nvfunc = np.vectorize(lambda x: x ** 2)\n","expected":{"verdict":"unverifiable","claim_contains":"vectorize"},"category":"c-extension-trap"}

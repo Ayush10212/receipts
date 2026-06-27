@@ -1,0 +1,1 @@
+{"id":"case-034","description":"np.concatenate (grounded) — AI concatenates arrays","code":"import numpy as np\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nresult = np.concatenate([a, b])\n","expected":{"verdict":"grounded","claim_contains":"concatenate"},"category":"valid-api"}

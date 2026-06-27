@@ -1,0 +1,1 @@
+{"id":"case-023","description":"pd.DataFrame.dropna (grounded) — AI drops rows with NaN","code":"import pandas as pd\ndf = pd.DataFrame({'a': [1, None, 3], 'b': [4, 5, None]})\nresult = pd.DataFrame.dropna(df)\n","expected":{"verdict":"grounded","claim_contains":"dropna"},"category":"valid-api"}

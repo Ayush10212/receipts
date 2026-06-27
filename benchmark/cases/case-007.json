@@ -1,0 +1,1 @@
+{"id":"case-007","description":"np.product removed in numpy 1.25 — AI generated product function","code":"import numpy as np\nresult = np.product([1, 2, 3, 4])\n","expected":{"verdict":"grounded","claim_contains":"product"},"category":"valid-api"}

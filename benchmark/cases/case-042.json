@@ -1,0 +1,1 @@
+{"id":"case-042","description":"import sklearn (unverifiable) — not installed, ImportError trap","code":"from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)\n","expected":{"verdict":"unverifiable","claim_contains":"sklearn"},"category":"import-error-trap"}

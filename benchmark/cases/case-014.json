@@ -1,0 +1,1 @@
+{"id":"case-014","description":"pd.DataFrame.mad removed in pandas 2.0 — AI computes mean absolute deviation","code":"import pandas as pd\ndf = pd.DataFrame({'x': [1.0, 2.0, 3.0, 4.0]})\nmad = pd.DataFrame.mad(df)\n","expected":{"verdict":"contradicted","claim_contains":"mad"},"category":"removed-api"}

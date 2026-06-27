@@ -1,0 +1,1 @@
+{"id":"case-037","description":"pd.read_csv (grounded) — AI reads data from file","code":"import pandas as pd\ndf = pd.read_csv('data.csv', sep=',', header=0)\n","expected":{"verdict":"grounded","claim_contains":"read_csv"},"category":"valid-api"}

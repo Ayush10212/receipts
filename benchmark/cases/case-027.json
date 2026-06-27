@@ -1,0 +1,1 @@
+{"id":"case-027","description":"pd.DataFrame.melt (grounded) — AI reshapes wide to long","code":"import pandas as pd\ndf = pd.DataFrame({'id': [1, 2], 'jan': [10, 20], 'feb': [30, 40]})\nresult = pd.DataFrame.melt(df, id_vars=['id'], value_vars=['jan', 'feb'])\n","expected":{"verdict":"grounded","claim_contains":"melt"},"category":"valid-api"}

@@ -1,0 +1,1 @@
+{"id":"case-004","description":"np.complex removed in numpy 1.24 — AI generated complex array","code":"import numpy as np\nz = np.complex(2.0, 3.0)\n","expected":{"verdict":"contradicted","claim_contains":"complex"},"category":"removed-api"}

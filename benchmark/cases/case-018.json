@@ -1,0 +1,1 @@
+{"id":"case-018","description":"pd.SparseDataFrame removed in pandas 1.0 — AI creates sparse frame","code":"import pandas as pd\ndf = pd.SparseDataFrame({'a': [1.0, None, 3.0], 'b': [None, 2.0, None]})\n","expected":{"verdict":"contradicted","claim_contains":"SparseDataFrame"},"category":"removed-api"}

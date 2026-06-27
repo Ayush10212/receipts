@@ -1,0 +1,1 @@
+{"id":"case-035","description":"np.reshape (grounded) — AI reshapes array","code":"import numpy as np\narr = np.arange(12)\nmatrix = np.reshape(arr, (3, 4))\n","expected":{"verdict":"grounded","claim_contains":"reshape"},"category":"valid-api"}

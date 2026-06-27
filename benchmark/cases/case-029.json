@@ -1,0 +1,1 @@
+{"id":"case-029","description":"np.array (grounded) — AI creates ndarray","code":"import numpy as np\narr = np.array([1, 2, 3, 4, 5])\n","expected":{"verdict":"grounded","claim_contains":"array"},"category":"valid-api"}

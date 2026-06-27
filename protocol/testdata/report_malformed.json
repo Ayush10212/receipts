@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "run": {
+    "id": "run-bad",
+    "timestamp": "not-a-date",
+    "tool_version": "0.1.0",
+    "inputs_hash": "xyz",
+    "target_env": {
+      "language": "python",
+      "version": "3.11.4",
+      "prefix": "/usr"
+    }
+  },
+  "claims": [
+    {
+      "id": "c-bad",
+      "type": "symbol",
+      "subtype": "INVALID_SUBTYPE",
+      "text": "foo.bar",
+      "locus": { "file": "x.py", "line": 1, "col": 0 },
+      "verdict": "WRONG_VERDICT",
+      "confidence": 99,
+      "evidence": [],
+      "verifier": { "name": "x", "version": "1", "determinism": "deterministic" }
+    }
+  ],
+  "policy": { "backend": "local", "decision": "maybe", "rules_applied": [] },
+  "summary": { "grounded": 0, "contradicted": 0, "unverifiable": 0 }
+}

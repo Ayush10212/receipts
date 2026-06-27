@@ -1,0 +1,1 @@
+{"id":"case-010","description":"np.alltrue removed in numpy 1.25 — AI generated all-true check","code":"import numpy as np\narr = np.array([True, True, True])\nresult = np.alltrue(arr)\n","expected":{"verdict":"grounded","claim_contains":"alltrue"},"category":"valid-api"}

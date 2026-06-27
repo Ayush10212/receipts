@@ -1,0 +1,1 @@
+{"id":"case-003","description":"np.float removed in numpy 1.24 — AI generated constant","code":"import numpy as np\npi_approx = np.float(3.14159)\n","expected":{"verdict":"contradicted","claim_contains":"float"},"category":"removed-api"}

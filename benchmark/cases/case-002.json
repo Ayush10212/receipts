@@ -1,0 +1,1 @@
+{"id":"case-002","description":"np.int removed in numpy 1.24 — AI generated array creation","code":"import numpy as np\narr = np.zeros(10, dtype=np.int)\n","expected":{"verdict":"contradicted","claim_contains":"int"},"category":"removed-api"}

@@ -1,0 +1,1 @@
+{"id":"case-039","description":"import nonexistent_package (unverifiable) — ImportError trap","code":"import nonexistent_ml_lib as ml\nmodel = ml.LinearRegression()\nmodel.fit(X, y)\n","expected":{"verdict":"unverifiable","claim_contains":"nonexistent_ml_lib"},"category":"import-error-trap"}

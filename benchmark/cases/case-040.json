@@ -1,0 +1,1 @@
+{"id":"case-040","description":"import torch (unverifiable) — not installed, ImportError trap","code":"import torch\nimport torch.nn as nn\nmodel = nn.Linear(10, 1)\nloss = torch.nn.MSELoss()\n","expected":{"verdict":"unverifiable","claim_contains":"torch"},"category":"import-error-trap"}

@@ -1,0 +1,1 @@
+{"id":"case-033","description":"np.std (grounded) — AI computes standard deviation","code":"import numpy as np\ndata = np.array([2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0])\nstd = np.std(data)\n","expected":{"verdict":"grounded","claim_contains":"std"},"category":"valid-api"}
