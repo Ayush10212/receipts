@@ -1,0 +1,26 @@
+---
+description: Fact-check AI-generated Python with Receipts before proposing it
+alwaysApply: true
+---
+
+# Receipts: verify Python before you propose it
+
+This repo ships **Receipts**, a static checker that verifies Python symbols against the
+*installed* packages. Before surfacing generated Python to the user, fact-check it.
+
+## How
+
+- Build once: `go build -o receipts ./cmd/receipts/`
+- Run: `./receipts check --format plain --python python <file.py>`
+- Or use the MCP tool `receipts_check_code` (server registered in `.cursor/mcp.json`),
+  which returns a plain-English review plus the full report.
+- One-time setup so the checker works: `pip install -e "verifiers/python-symbols"`.
+
+## Rules
+
+- Three verdicts only: `grounded`, `contradicted`, `unverifiable`. When unsure it is
+  `unverifiable`, never a false `contradicted`.
+- Exit codes: `0` pass/warn, `1` contradicted, `2` tool error.
+- If a symbol is `contradicted` (it does not exist in the installed package), **fix the
+  code before showing it to the user** — suggest the correct current API.
+- Never override a verdict; Receipts checks reality, you only explain its result.

@@ -36,7 +36,9 @@ env/
 
 # IDE
 .idea/
-.vscode/
+.vscode/*
+# ...but DO ship the shared MCP server config so the tool auto-loads in VS Code.
+!.vscode/mcp.json
 *.swp
 *.swo
 

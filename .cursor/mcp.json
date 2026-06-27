@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "receipts": {
+      "command": "go",
+      "args": ["run", "./cmd/receipts-mcp"]
+    }
+  }
+}

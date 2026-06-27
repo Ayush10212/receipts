@@ -105,10 +105,21 @@ the false-positive rate is a hard gate (**< 10%**, enforced in CI — currently 
 This is the point. Receipts is most powerful sitting *inside* your AI workflow so every
 piece of generated code is fact-checked automatically.
 
-**`/receipts` slash command** — clone the repo and the
-[`/receipts`](.claude/commands/receipts.md) command is available in Claude Code. Type
-`/receipts yourfile.py` (or just `/receipts` to check your current git diff) and your
-assistant runs the check and hands back the plain-English review.
+**Works in every AI client out of the box.** A fresh `git clone` ships native integration
+for the major assistants — see **[docs/ai-clients.md](docs/ai-clients.md)** for the full
+list:
+
+| Client | What you get on clone |
+|---|---|
+| **Claude Code** | `/receipts` command + auto-MCP (`.claude/`, `.mcp.json`) |
+| **Gemini CLI** | `/receipts` command + MCP (`.gemini/`) |
+| **Cursor** | always-on rule + MCP (`.cursor/`) |
+| **VS Code + Copilot** | auto instructions + MCP (`.github/`, `.vscode/`) |
+| **Codex / any agent** | run-it guidance via `AGENTS.md` |
+
+In Claude Code, for example: type `/receipts yourfile.py` (or just `/receipts` to check your
+current git diff) and your assistant runs the check and hands back the plain-English review.
+The **CLI** and **MCP server** work in *every* client regardless.
 
 **MCP server** — Receipts ships an [MCP](https://modelcontextprotocol.io) server with a
 `receipts_check_code` tool. An AI calls it *before* showing you code; it returns **two

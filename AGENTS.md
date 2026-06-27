@@ -6,6 +6,19 @@ Guidance for AI agents (Codex, Claude Code, Copilot, etc.) working in this repos
 
 Receipts statically verifies AI-generated Python code against installed packages. It catches hallucinated symbols before a human reviews the code. The MCP surface (`adapters/mcp/`) is the primary integration point for agents — call `receipts_check_code` to self-check code before proposing it.
 
+## Run it as a check (before you propose Python to the user)
+
+One-time setup so the checker works: `pip install -e "verifiers/python-symbols"`.
+
+- Build once: `go build -o receipts ./cmd/receipts/`
+- Run: `./receipts check --format plain --python python <file.py>`
+- Empty target → check the current git diff (`git diff --name-only -- '*.py'`), else `--staged`.
+- Exit codes: `0` pass/warn · `1` something is `contradicted` · `2` tool error.
+
+If a symbol comes back `contradicted`, it does not exist in the installed package — fix the
+code (suggest the correct current API) before showing it to the user. Never override a
+verdict; Receipts checks reality, you only explain its result.
+
 ## Non-negotiable constraints
 
 These are not style preferences. Violating them breaks the product's credibility:
@@ -68,7 +81,7 @@ Any change to `protocol/report.v0.json` or `protocol/verifier-protocol.v0.json`:
 | Python tests | `python -m pytest` | all pass |
 | Schema validation | `go test ./protocol/...` | all pass |
 | Honesty invariant | part of `go test ./...` | verdicts identical with/without `--llm` |
-| Benchmark | `go run testdata/benchmark/run_benchmark.go` | catch ≥ 80%, FP < 10% |
+| Benchmark | `make benchmark` | catch ≥ 80%, FP < 10% |
 
 Never mark work complete if any gate is red.
 
