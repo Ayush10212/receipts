@@ -64,7 +64,7 @@ func TestMCPServer_ReturnsSchemaValidReport(t *testing.T) {
 	sch := loadSchema(t)
 
 	result := callHandler(t, map[string]any{
-		"code":    "import pandas as pd\npd.DataFrame.merge\n",
+		"code":    "import json\njson.dumps\n",
 		"python":  py,
 		"workdir": ".",
 	})
@@ -103,7 +103,7 @@ func TestMCPServer_ContradictedSymbol_ReportedCorrectly(t *testing.T) {
 	py := pythonExe(t)
 
 	result := callHandler(t, map[string]any{
-		"code":    "import pandas as pd\npd.DataFrame.append\n",
+		"code":    "import json\njson.contradicted_symbol_does_not_exist\n",
 		"python":  py,
 		"workdir": ".",
 	})

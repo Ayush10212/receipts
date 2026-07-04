@@ -23,12 +23,14 @@ func pythonExe(t *testing.T) string {
 	return ""
 }
 
-const contradictedPy = `import pandas as pd
-pd.DataFrame.append
+// Uses the stdlib json module (always importable, no third-party deps) so this
+// test's pass/fail behavior does not depend on what's installed in the environment.
+const contradictedPy = `import json
+json.contradicted_symbol_does_not_exist
 `
 
-const cleanPy = `import pandas as pd
-pd.DataFrame.merge
+const cleanPy = `import json
+json.dumps
 `
 
 func writeTempPy(t *testing.T, dir, name, content string) string {

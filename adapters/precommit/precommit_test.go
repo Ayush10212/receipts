@@ -50,7 +50,7 @@ func TestPrecommit_ContradictedFileFails(t *testing.T) {
 	dir := t.TempDir()
 	initGitRepo(t, dir)
 
-	stageFile(t, dir, "bad.py", "import pandas as pd\npd.DataFrame.append\n")
+	stageFile(t, dir, "bad.py", "import json\njson.contradicted_symbol_does_not_exist\n")
 
 	oldWd, _ := os.Getwd()
 	os.Chdir(dir)
@@ -70,7 +70,7 @@ func TestPrecommit_CleanFilePasses(t *testing.T) {
 	dir := t.TempDir()
 	initGitRepo(t, dir)
 
-	stageFile(t, dir, "good.py", "import pandas as pd\npd.DataFrame.merge\n")
+	stageFile(t, dir, "good.py", "import json\njson.dumps\n")
 
 	oldWd, _ := os.Getwd()
 	os.Chdir(dir)
