@@ -10,7 +10,11 @@ requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
 
 [project.optional-dependencies]
-dev = ["pytest>=7.0"]
+# pandas/numpy are required by the acceptance tests in tests/test_analyze.py and
+# tests/test_introspect.py, which assert against real, known API changes
+# (e.g. pandas.DataFrame.append removed in 2.0) — not mockable without losing
+# the point of those tests. Version-pinned to match the benchmark CI job.
+dev = ["pytest>=7.0", "numpy>=1.26,<2", "pandas>=2.0"]
 
 [tool.setuptools.packages.find]
 where = ["."]
