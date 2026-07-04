@@ -13,7 +13,7 @@ Three hard invariants that must never break:
 
 ## Build & test commands
 
-All commands run from `receipts/` (the monorepo root inside `paper-trail/`).
+All commands run from the repository root.
 
 ```bash
 # Full suite (Go tests + Python tests + schema validation)
